@@ -1,0 +1,43 @@
+{   
+    "version": "2.0.0",   
+    "command": "gcc", // 注意对应  
+    
+    
+    
+    "args":["-g","-l","gdi32","-mwindows","${file}","-o","${fileBasenameNoExtension}.exe"],    // 编译命令参数
+    "problemMatcher": {       
+        "owner": "cpp",
+        "fileLocation":["relative","${workspaceFolder}"],        
+        "pattern": {
+        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+        "file": 1,         
+        "line": 2,         
+        "column": 3,           
+        "severity": 4,            
+        "message": 5       
+        }  
+    },
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe 生成活动文件",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe:",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": "build",
+            "detail": "编译器: cl.exe"
+        }
+    ]
+  }
