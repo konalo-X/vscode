@@ -3,5 +3,6 @@
         "windows.h": "c",
         "winapifamily.h": "c",
         "mmsyscom.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -119,10 +119,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			
 			//InvalidateRect(GetDlgItem(hWnd, IDC_SAMPLE),NULL,
 			break;
-			case BN_CLICKED:
+		case BN_CLICKED:
 			filllistbox(hWnd);
 			onsel(hWnd);
+			//if(HIWORD(wParam)==IDC_CHECKBOX)
+			MessageBox(NULL,_T("This features has not implemented yet!"),_T("提示"),MB_OK|MB_ICONEXCLAMATION);
 			break;
+		
 		}
 
 		break;
